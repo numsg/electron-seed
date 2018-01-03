@@ -14,7 +14,7 @@
 *  安装electron方法有两种
       1. 在.npmrc中配置electron镜像路径,指定安装electron版本
       ```
-      ELECTRON_MIRROR=http://172.18.24.51:8081/nexus/content/sites/gs-assets/electron/1.6.11/electron-v1.6.11-win32-x64.zip
+      ELECTRON_MIRROR=http://localhost/nexus/content/sites/gs-assets/electron/1.6.11/electron-v1.6.11-win32-x64.zip
       ```
       ```
       npm install electron@1.6.11 -g
@@ -22,7 +22,7 @@
       2. :star: 在package.json中script中添加：
       ```
       "preinstall": "npm run install-electron",
-      "install-electron": "npm install electron@1.6.11 --ELECTRON_MIRROR=http://172.18.24.51:8081/nexus/content/sites/gs-assets/electron/"
+      "install-electron": "npm install electron@1.6.11 --ELECTRON_MIRROR=http://localhost/nexus/content/sites/gs-assets/electron/"
       ```
 *  使用git Clone源码
 *  执行npm install
@@ -32,7 +32,7 @@
 
 ## 4. 特性
 
-1. [种子工程加载方式](./docs/load-ui-mode.md)
+* [种子工程加载方式](./docs/load-ui-mode.md)
 * [main(brower)线程全局异常处理方式](./docs/exception-handler.md)
 * [主线程与render线程交互](./docs/load-ui-mode.md)
 *  karma单元测试(与webpack结合)
@@ -58,13 +58,13 @@
 electron-seed/
   |- build/                                        - 应用输出目录，类似于Debug
   |  |- output/                                    - electron 打包后的输出目录
-  |  |  |- electron-seed-win32-x64           - windows 打包输出目录
+  |  |  |- electron-seed-win32-x64                 - windows 打包输出目录
   |  |  |  |- locales/                             - 
   |  |  |  |- resources/                           - asar 文件目录
   |  |  |  |  |- app.asar.unpacked/                - 该目录存放壳相关配置文件
   |  |  |  |  └─ electron.asar                     - 壳相关代码文件
   |  |  |  |- ...                 	      		     - eclectron 依赖文件
-  |  |  |  └─ electron-seed.exe              - 执行程序
+  |  |  |  └─ electron-seed.exe                    - 可执行程序
   |  |- reports/                                   - 测试报告输出目录
   |  |  |- karma/                                  - 
   |  |  |  └─ lcov.info                            - 测试覆盖率相关信息
@@ -75,9 +75,9 @@ electron-seed/
   |  |- gulp.config.js                             - gulp配置脚本
   |  └─ helpers.js                                 - js通用库
   |- dist/                                         - 应用发布目录
-  |  |- electron-seed-win32-x64/             - electron 制作安装包发布目录
-  |  |  |- electron-seed-v0.1.1-alpha-setup           - 安装文件
-  |  |  |- electron-seed-0.1.1-alpha-full.nupkg        - 安装文件依赖包
+  |  |- electron-seed-win32-x64/                   - electron 制作安装包发布目录
+  |  |  |- electron-seed-v0.1.1-alpha-setup        - 安装文件
+  |  |  |- electron-seed-0.1.1-alpha-full.nupkg    - 安装文件依赖包
   |  |  └─ RELEASES                                - 安装文件依赖包标识和增量更新关系
   └─ docs/                                         - 文档相关目录
   |- node_modules/                                 - 依赖的第三方node组件
