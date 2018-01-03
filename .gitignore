@@ -1,0 +1,23 @@
+# webstorm
+.idea/
+
+# vscode
+.vscode
+
+# npm
+node_modules/
+npm-debug.log
+
+# for publish folder
+build/
+dist/
+resource/
+/buildReport/
+tests/sonar-report/
+/tests/intern.js
+
+# other
+*.log
+*.exe
+*.jar
+.sonar/

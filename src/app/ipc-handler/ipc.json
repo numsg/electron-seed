@@ -1,0 +1,8 @@
+{
+  "login_event": {
+    "loginSucceedEvent": "loginSucceedEvent"
+  },
+  "sys_event":{
+    "exitApp": "exitApp"
+  }
+}

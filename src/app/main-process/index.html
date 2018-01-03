@@ -1,0 +1,11 @@
+<script>
+    function test(){
+      if(require){
+        window.ipcRenderer = require('electron').ipcRenderer;
+        ipcRenderer.send('loginSucceedEvent');
+      }
+    }
+</script> 
+<div>111
+  <input type="button" value="login" onClick="test()"/>
+</div>

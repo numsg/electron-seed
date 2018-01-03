@@ -1,0 +1,22 @@
+{
+  "login_window_config":{
+    "width": 500,
+    "height": 300,
+    "frame": false,
+    "resizable": false,
+    "webPreferences": {
+      "nodeIntegration": true
+    }
+  },
+  "log_config": {
+    "verbose": "silly",
+    "logPath": "C:\\Users\\gaoqiang\\AppData\\Roaming\\Electron\\loginfo"
+  },
+  "debug_config": {
+    "isDebug": true,
+    "isShowDevTools": true,
+    "loadURL": "http://localhost:9000/"
+  },
+  "version": "1.0.0",
+  "chanel": "stable"
+}
